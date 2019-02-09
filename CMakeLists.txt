@@ -1,8 +1,6 @@
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR) # because of c++17
 project(nod VERSION 0.1)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
 include (CMakePackageConfigHelpers)
@@ -34,6 +32,7 @@ install(
     TARGETS nod
     EXPORT nodTargets
     ARCHIVE DESTINATION "lib"
+    LIBRARAY DESTINATION "lib"
     INCLUDES DESTINATION "include/nod"  # This sets the INTERFACE_INCLUDE_DIRECTORIES property of the target.
 )
 

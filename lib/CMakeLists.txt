@@ -19,3 +19,5 @@ add_library(nod
 if(NOT MSVC AND NOT NX)
 set_source_files_properties(aes.cpp PROPERTIES COMPILE_FLAGS -maes)
 endif()
+
+target_compile_features(nod PRIVATE cxx_std_17)

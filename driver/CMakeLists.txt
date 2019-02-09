@@ -9,3 +9,6 @@ if (NOT WIN32)
         target_link_libraries(nodtool dl)
     endif()
 endif()
+
+target_compile_features(nodtool PRIVATE cxx_std_17)
+
